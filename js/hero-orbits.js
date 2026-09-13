@@ -6,11 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const heroSection = document.querySelector('.hero-section');
   const character = document.querySelector('.character-img');
-  const orbitSystem = document.querySelector('.orbit-system');
-  const badges = document.querySelectorAll('.floating-badge');
   const testimonialCard = document.querySelector('.testimonial-card-hero');
-  const shardTop = document.querySelector('.lightning-shard-top');
-  const shardBottom = document.querySelector('.lightning-shard-bottom');
 
   if (!heroSection) return;
 
@@ -39,29 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const transY = targetY * 14;
       character.style.transform = `translate3d(${transX}px, ${transY}px, 0) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
     }
-
-    // Orbit rings subtle skew/depth
-    if (orbitSystem) {
-      const orbitX = targetX * -10;
-      const orbitY = targetY * -10;
-      orbitSystem.style.transform = `translate(calc(-50% + ${orbitX}px), calc(-50% + ${orbitY}px)) rotateX(${targetY * 8}deg) rotateY(${targetX * 8}deg)`;
-    }
-
-    // Shards depth
-    if (shardTop) {
-      shardTop.style.transform = `translate3d(${targetX * -25}px, ${targetY * -20}px, 0) rotate(${targetX * 5}deg)`;
-    }
-    if (shardBottom) {
-      shardBottom.style.transform = `translate3d(${targetX * 15}px, ${targetY * 15}px, 0) rotate(${targetY * -4}deg)`;
-    }
-
-    // Floating badges subtle dynamic counter-movement
-    badges.forEach((badge, index) => {
-      const factor = (index + 1) * 6;
-      const bx = targetX * factor;
-      const by = targetY * factor;
-      badge.style.transform = `translate3d(${bx}px, ${by}px, 0)`;
-    });
 
     requestAnimationFrame(renderParallax);
   }

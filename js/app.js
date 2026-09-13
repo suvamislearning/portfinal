@@ -72,6 +72,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const typeCursor = document.querySelector('.type-cursor');
   const descTypewriter = document.querySelector('.desc-typewriter');
   const descCursor = document.querySelector('.desc-cursor');
+  const testimonialCard = document.querySelector('.testimonial-card-hero');
+  const themeOptions = document.querySelectorAll('.theme-option');
+
+  const updateThemeToggle = () => {
+    const isLight = document.documentElement.dataset.theme === 'light';
+    themeOptions.forEach((option) => {
+      const isActive = option.dataset.themeChoice === (isLight ? 'light' : 'dark');
+      option.classList.toggle('active', isActive);
+      option.setAttribute('aria-pressed', String(isActive));
+    });
+  };
+
+  updateThemeToggle();
+
+  themeOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+      const isLight = option.dataset.themeChoice === 'light';
+      document.documentElement.dataset.theme = isLight ? 'light' : 'dark';
+      localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+      updateThemeToggle();
+    });
+  });
 
   if (typewriterText && typeCursor) {
     const text = typewriterText.dataset.text || 'Web Developer';
@@ -90,11 +112,21 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeNext, 110);
       } else {
         typeCursor.style.display = 'none';
+        if (testimonialCard) {
+          testimonialCard.classList.add('is-visible', 'is-auto-flipping');
+          testimonialCard.addEventListener('animationend', () => {
+            testimonialCard.classList.remove('is-auto-flipping');
+          }, { once: true });
+          testimonialCard.removeAttribute('aria-hidden');
+        }
       }
     };
 
     typewriterText.innerHTML = '';
     typeNext();
+  } else if (testimonialCard) {
+    testimonialCard.classList.add('is-visible');
+    testimonialCard.removeAttribute('aria-hidden');
   }
 
   if (descTypewriter && descCursor) {

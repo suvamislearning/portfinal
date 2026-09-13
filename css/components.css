@@ -209,6 +209,167 @@
   transition: var(--transition-fast);
 }
 
+/* Light theme surfaces keep the same warm accent while replacing dark glass
+   with clearer, layered panels and readable controls. */
+:root[data-theme="light"] {
+  --light-surface: rgba(255, 255, 255, 0.82);
+  --light-surface-strong: rgba(255, 255, 255, 0.94);
+  --light-border: rgba(91, 64, 47, 0.15);
+  --light-shadow: 0 18px 45px rgba(76, 52, 38, 0.11);
+}
+
+:root[data-theme="light"] .site-header.scrolled {
+  background: rgba(251, 250, 248, 0.9);
+  box-shadow: 0 8px 28px rgba(76, 52, 38, 0.08);
+}
+
+:root[data-theme="light"] .nav-pill-group,
+:root[data-theme="light"] .theme-switcher,
+:root[data-theme="light"] .btn-resume {
+  background: var(--light-surface-strong);
+  border-color: var(--light-border);
+  box-shadow: 0 8px 24px rgba(76, 52, 38, 0.08);
+}
+
+:root[data-theme="light"] .nav-link {
+  color: var(--text-secondary);
+}
+
+:root[data-theme="light"] .nav-link:hover,
+:root[data-theme="light"] .nav-link.active {
+  color: var(--accent-orange);
+}
+
+:root[data-theme="light"] .btn-icon-mail,
+:root[data-theme="light"] .filter-btn,
+:root[data-theme="light"] .btn-project-secondary,
+:root[data-theme="light"] .social-link-btn {
+  background: var(--light-surface);
+  border-color: var(--light-border);
+  color: var(--text-primary);
+}
+
+:root[data-theme="light"] .skill-card,
+:root[data-theme="light"] .project-card,
+:root[data-theme="light"] .testimonial-box,
+:root[data-theme="light"] .contact-container-grid {
+  background: var(--light-surface);
+  border-color: var(--light-border);
+  box-shadow: var(--light-shadow);
+}
+
+:root[data-theme="light"] .skill-card:hover,
+:root[data-theme="light"] .project-card:hover,
+:root[data-theme="light"] .testimonial-box:hover {
+  box-shadow: 0 22px 48px rgba(76, 52, 38, 0.16), 0 0 25px rgba(255, 87, 34, 0.1);
+}
+
+:root[data-theme="light"] .skill-icon-wrapper,
+:root[data-theme="light"] .contact-detail-card,
+:root[data-theme="light"] .project-tag,
+:root[data-theme="light"] .form-input,
+:root[data-theme="light"] .form-textarea,
+:root[data-theme="light"] .form-select {
+  background: rgba(248, 246, 243, 0.9);
+  border-color: var(--light-border);
+}
+
+:root[data-theme="light"] .skill-bar-bg {
+  background: rgba(91, 64, 47, 0.12);
+}
+
+:root[data-theme="light"] .project-preview {
+  background: #eee9e3;
+}
+
+:root[data-theme="light"] .project-overlay-badge {
+  background: rgba(255, 255, 255, 0.86);
+  border-color: var(--light-border);
+  color: var(--accent-orange);
+}
+
+:root[data-theme="light"] .project-tag {
+  color: var(--text-secondary);
+}
+
+:root[data-theme="light"] .test-quote,
+:root[data-theme="light"] .testimonial-text,
+:root[data-theme="light"] .testimonial-back-text {
+  color: var(--text-secondary);
+}
+
+:root[data-theme="light"] .testimonial-card-face {
+  background: var(--light-surface);
+  border-color: var(--light-border);
+  box-shadow: var(--light-shadow);
+}
+
+:root[data-theme="light"] .quote-icon {
+  color: var(--accent-orange);
+}
+
+:root[data-theme="light"] .author-role,
+:root[data-theme="light"] .form-group label {
+  color: var(--text-muted);
+}
+
+:root[data-theme="light"] .contact-detail-card:hover {
+  background: rgba(255, 87, 34, 0.06);
+}
+
+:root[data-theme="light"] .form-input,
+:root[data-theme="light"] .form-textarea,
+:root[data-theme="light"] .form-select {
+  color: var(--text-primary);
+}
+
+:root[data-theme="light"] .form-input::placeholder,
+:root[data-theme="light"] .form-textarea::placeholder {
+  color: #9b8b81;
+}
+
+:root[data-theme="light"] .site-footer {
+  border-top-color: var(--light-border);
+}
+
+:root[data-theme="light"] .modal-backdrop {
+  background: rgba(49, 31, 21, 0.42);
+}
+
+:root[data-theme="light"] .modal-container,
+:root[data-theme="light"] .resume-modal-container {
+  background: var(--light-surface-strong);
+  border-color: var(--light-border);
+  box-shadow: 0 30px 80px rgba(76, 52, 38, 0.22), 0 0 50px rgba(255, 87, 34, 0.1);
+}
+
+:root[data-theme="light"] .resume-paper {
+  background: #fffdfa;
+  border-color: var(--light-border);
+  color: var(--text-secondary);
+}
+
+:root[data-theme="light"] .resume-candidate-name,
+:root[data-theme="light"] .resume-section-title {
+  color: var(--text-primary);
+}
+
+:root[data-theme="light"] .modal-close-btn {
+  background: #f5f1ed;
+  border-color: var(--light-border);
+  color: var(--text-secondary);
+}
+
+:root[data-theme="light"] .toast-notification {
+  background: rgba(255, 255, 255, 0.96);
+  color: var(--text-primary);
+  box-shadow: 0 12px 36px rgba(76, 52, 38, 0.18), 0 0 20px rgba(255, 87, 34, 0.14);
+}
+
+:root[data-theme="light"] .floating-flag-icon {
+  box-shadow: 0 10px 25px rgba(76, 52, 38, 0.18);
+}
+
 /* ==========================================================================
    RESPONSIVE DESIGN SYSTEM
    ========================================================================== */
@@ -220,14 +381,6 @@
   }
   .character-img {
     max-width: 480px;
-  }
-  .ring-outer {
-    width: 620px;
-    height: 620px;
-  }
-  .ring-middle {
-    width: 460px;
-    height: 460px;
   }
 }
 
@@ -259,14 +412,6 @@
   }
   .character-img {
     max-width: 420px;
-  }
-  .lightning-shard-top {
-    width: 160px;
-    height: 200px;
-    right: 10px;
-  }
-  .lightning-shard-bottom {
-    display: none;
   }
   .contact-container-grid {
     grid-template-columns: 1fr;
@@ -310,22 +455,15 @@
   .character-img {
     max-width: 320px;
   }
-  .ring-outer {
-    width: 360px;
-    height: 360px;
-  }
-  .ring-middle {
-    width: 280px;
-    height: 280px;
-  }
-  .ring-inner {
-    width: 200px;
-    height: 200px;
-  }
-  .floating-badge {
-    transform: scale(0.8) !important;
-  }
   .form-row {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  :root[data-theme="light"] .nav-pill-group {
+    background: rgba(255, 255, 255, 0.96);
+    border-color: var(--light-border);
+    box-shadow: 0 20px 50px rgba(76, 52, 38, 0.16);
   }
 }

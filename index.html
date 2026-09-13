@@ -16,7 +16,12 @@
   <title>Suvam's Portfolio</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23FF5722'/><text x='50' y='65' font-size='48' font-weight='800' fill='white' text-anchor='middle'>N</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='72' font-size='72' text-anchor='middle'>⚡</text></svg>">
+  <script>
+    if (localStorage.getItem('portfolio-theme') === 'light') {
+      document.documentElement.dataset.theme = 'light';
+    }
+  </script>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/main.css">
@@ -52,6 +57,10 @@
           </svg>
           <span>Download Resume</span>
         </button>
+        <div class="theme-switcher" role="group" aria-label="Choose color theme">
+          <button id="btn-theme-dark" class="theme-option" type="button" data-theme-choice="dark" aria-pressed="true">Dark</button>
+          <button id="btn-theme-light" class="theme-option" type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+        </div>
 
         <button class="hamburger-btn" aria-label="Toggle navigation menu">
           <span></span>
@@ -66,9 +75,6 @@
   <main>
     <!-- HERO SECTION (Matches Figma Frame 1440x1024) -->
     <section id="home" class="hero-section">
-      <!-- 3D Crystal Lightning Shard (Bottom-Left Background) -->
-      <img src="assets/images/lightning_shard_bottom.svg" alt="" class="lightning-shard-bottom" aria-hidden="true">
-
       <div class="container hero-layout">
         <!-- Left Column: Typography & CTAs & Testimonial -->
         <div class="hero-content">
@@ -98,78 +104,62 @@
           </div>
 
           <!-- Glassmorphic Testimonial Card (Bottom Left) -->
-          <div class="testimonial-card-hero">
-            <div class="quote-icon" aria-hidden="true">&ldquo;&ldquo;</div>
-            <p class="testimonial-text">
-             Suvam did an amazing job bringing the idea to life. The website looks modern⭐, 
-             feels smooth🔥, and works beautifully across devices😍.
-            </p>
-            <div class="testimonial-author">
-              <img src="assets/images/carolina_avatar.jpg" alt="Carolina Abott" class="author-avatar">
-              <div class="author-info">
-                <span class="author-name">Carolina Abott</span>
-                <span class="author-role">Business Owner</span>
+          <div class="testimonial-card-hero" tabindex="0" aria-label="Testimonial from Carolina Abott" aria-hidden="true">
+            <div class="testimonial-card-inner">
+              <div class="testimonial-card-face testimonial-card-front">
+                <div class="quote-icon" aria-hidden="true">&ldquo;&ldquo;</div>
+                <p class="testimonial-text">
+                 Suvam did an amazing job bringing the idea to life. The website looks modern⭐,
+                 feels smooth🔥, and works beautifully across devices😍.
+                </p>
+                <div class="testimonial-author">
+                  <img src="assets/images/carolina_avatar.jpg" alt="Carolina Abott" class="author-avatar">
+                  <div class="author-info">
+                    <span class="author-name">Carolina Abott</span>
+                    <span class="author-role">Business Owner</span>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-card-face testimonial-card-back" aria-hidden="true">
+                <span class="testimonial-back-icon" aria-hidden="true">⭐</span>
+                <p class="testimonial-back-text">Ideas brought to life with care, creativity, and attention to detail.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Column: 3D Character Scene & Orbits -->
+        <!-- Right Column: 3D Character Scene -->
         <div class="hero-visual-scene">
-          <!-- 3D Crystal Lightning Shard (Top-Right) -->
-          <img src="assets/images/lightning_shard_top.svg" alt="" class="lightning-shard-top" aria-hidden="true">
-
-          <!-- Amber Radial Glow -->
-          <div class="character-glow" aria-hidden="true"></div>
-
-          <!-- Concentric Orbital Radar Rings -->
-          <div class="orbit-system" aria-hidden="true">
-            <div class="orbit-ring ring-outer"></div>
-            <div class="orbit-ring ring-middle"></div>
-            <div class="orbit-ring ring-inner"></div>
-          </div>
-
           <!-- 3D Character Illustration -->
-          <div class="character-container">
+          <div class="character-container" role="button" tabindex="0" aria-label="Double-click Suvam's character to start a portfolio introduction">
             <img src="assets/images/suvam_character.png" alt="Suvam - 3D Character Web Developer" class="character-img">
+            <div class="character-conversation" aria-live="polite" aria-atomic="true"></div>
           </div>
+        </div>
+      </div>
 
-          <!-- Floating Orbital Badges (Figma Layout Positions) -->
-          <div class="floating-badge badge-html" title="HTML5">
-            <img src="assets/icons/html5.svg" alt="HTML5">
-          </div>
+      <!-- Moving tech rail in the open space below the hero content -->
+      <div class="tech-marquee" aria-label="Technology stack icons moving from right to left">
+        <div class="tech-track">
+          <span class="tech-item"><img src="assets/icons/html5.svg" alt="HTML5"></span>
+          <span class="tech-item"><img src="assets/icons/css3.svg" alt="CSS3"></span>
+          <span class="tech-item"><img src="assets/icons/javascript.svg" alt="JavaScript"></span>
+          <span class="tech-item"><img src="assets/icons/react.svg" alt="React"></span>
+          <span class="tech-item"><img src="assets/icons/nodejs.svg" alt="Node.js"></span>
+          <span class="tech-item"><img src="assets/icons/figma.svg" alt="Figma"></span>
+          <span class="tech-item"><img src="assets/icons/python-svg.svg" alt="Python"></span>
+          <span class="tech-item"><img src="assets/icons/C%2B%2B%20SVG.svg" alt="C++"></span>
+          <span class="tech-item"><img src="assets/icons/php%20svg.svg" alt="PHP"></span>
 
-          <div class="floating-badge badge-css" title="CSS3">
-            <img src="assets/icons/css3.svg" alt="CSS3">
-          </div>
-
-          <div class="floating-badge badge-node" title="Node.js">
-            <img src="assets/icons/nodejs.svg" alt="Node.js">
-          </div>
-
-          <div class="floating-badge badge-figma" title="Figma">
-            <img src="assets/icons/figma.svg" alt="Figma">
-          </div>
-
-          <div class="floating-badge badge-js" title="JavaScript">
-            <img src="assets/icons/javascript.svg" alt="JavaScript">
-          </div>
-
-          <div class="floating-badge badge-react" title="React">
-            <img src="assets/icons/react.svg" alt="React">
-          </div>
-
-          <div class="floating-badge badge-cpp" title="C++">
-            <img src="assets/icons/C%2B%2B%20SVG.svg" alt="C++">
-          </div>
-
-          <div class="floating-badge badge-python" title="Python">
-            <img src="assets/icons/python-svg.svg" alt="Python">
-          </div>
-
-          <div class="floating-badge badge-php" title="PHP">
-            <img src="assets/icons/php%20svg.svg" alt="PHP">
-          </div>
+          <span class="tech-item"><img src="assets/icons/html5.svg" alt="HTML5"></span>
+          <span class="tech-item"><img src="assets/icons/css3.svg" alt="CSS3"></span>
+          <span class="tech-item"><img src="assets/icons/javascript.svg" alt="JavaScript"></span>
+          <span class="tech-item"><img src="assets/icons/react.svg" alt="React"></span>
+          <span class="tech-item"><img src="assets/icons/nodejs.svg" alt="Node.js"></span>
+          <span class="tech-item"><img src="assets/icons/figma.svg" alt="Figma"></span>
+          <span class="tech-item"><img src="assets/icons/python-svg.svg" alt="Python"></span>
+          <span class="tech-item"><img src="assets/icons/C%2B%2B%20SVG.svg" alt="C++"></span>
+          <span class="tech-item"><img src="assets/icons/php%20svg.svg" alt="PHP"></span>
         </div>
       </div>
     </section>
@@ -534,6 +524,7 @@
   <!-- JavaScript Scripts -->
   <script src="js/data.js"></script>
   <script src="js/hero-orbits.js"></script>
+  <script src="js/character-conversation.js"></script>
   <script src="js/modals.js"></script>
   <script src="js/app.js"></script>
 </body>
