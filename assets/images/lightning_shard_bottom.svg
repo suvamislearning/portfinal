@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" fill="none">
+  <defs>
+    <filter id="crystal-glow-bottom" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur1"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#FF5722" flood-opacity="0.6"/>
+    </filter>
+    <linearGradient id="bottom-facet-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <feStop offset="0%" stop-color="#FFA726"/>
+      <feStop offset="50%" stop-color="#FF5722"/>
+      <feStop offset="100%" stop-color="#C41C00"/>
+    </linearGradient>
+    <linearGradient id="bottom-facet-side" x1="0%" y1="100%" x2="100%" y2="0%">
+      <feStop offset="0%" stop-color="#801500"/>
+      <feStop offset="100%" stop-color="#FF7043"/>
+    </linearGradient>
+    <linearGradient id="bottom-spec" x1="0%" y1="0%" x2="100%" y2="0%">
+      <feStop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <feStop offset="100%" stop-color="#FFAB40" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#crystal-glow-bottom)" transform="scale(1, -1) translate(0, -320) rotate(-15 120 160)">
+    <!-- 3D Shadow/Under-block -->
+    <path d="M110 30 L185 135 L140 148 L175 265 L75 160 L115 148 Z" fill="#360800" opacity="0.7"/>
+
+    <!-- 3D Extruded Sides -->
+    <path d="M110 30 L125 40 L88 158 L75 160 Z" fill="url(#bottom-facet-side)"/>
+    <path d="M185 135 L170 145 L140 148 L155 138 Z" fill="url(#bottom-facet-side)"/>
+    <path d="M175 265 L160 270 L140 255 L155 250 Z" fill="url(#bottom-facet-side)"/>
+
+    <!-- Front Facet -->
+    <path d="M125 40 L200 145 L155 158 L190 275 L88 170 L130 158 Z" fill="url(#bottom-facet-1)"/>
+
+    <!-- Specular Highlight -->
+    <path d="M125 40 L200 145" stroke="url(#bottom-spec)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M88 170 L190 275" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+    <circle cx="160" cy="180" r="3" fill="#FFFFFF"/>
+  </g>
+</svg>

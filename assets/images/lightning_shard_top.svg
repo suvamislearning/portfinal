@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" fill="none">
+  <defs>
+    <!-- Glow filter -->
+    <filter id="crystal-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="blur1"/>
+      <feGaussianBlur stdDeviation="24" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Crystal face gradients -->
+    <linearGradient id="facet-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <feStop offset="0%" stop-color="#FF9E40" stop-opacity="0.95"/>
+      <feStop offset="40%" stop-color="#FF5722" stop-opacity="0.9"/>
+      <feStop offset="100%" stop-color="#D83000" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="facet-side-left" x1="0%" y1="0%" x2="0%" y2="100%">
+      <feStop offset="0%" stop-color="#FF7043" stop-opacity="0.85"/>
+      <feStop offset="100%" stop-color="#8F1D00" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="facet-side-right" x1="100%" y1="0%" x2="0%" y2="100%">
+      <feStop offset="0%" stop-color="#FFA726" stop-opacity="0.9"/>
+      <feStop offset="60%" stop-color="#E64A19" stop-opacity="0.85"/>
+      <feStop offset="100%" stop-color="#5D1200" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="specular-gloss" x1="20%" y1="0%" x2="80%" y2="100%">
+      <feStop offset="0%" stop-color="#FFFFFF" stop-opacity="0.75"/>
+      <feStop offset="30%" stop-color="#FFE082" stop-opacity="0.3"/>
+      <feStop offset="100%" stop-color="#FF5722" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#crystal-glow)">
+    <!-- 3D Extrusion Back/Under -->
+    <path d="M120 20 L200 130 L150 145 L190 270 L80 160 L125 145 Z" fill="#420B00" opacity="0.6"/>
+    
+    <!-- 3D Side Facet 1 (Left extrusion) -->
+    <path d="M120 20 L135 32 L95 157 L80 160 Z" fill="url(#facet-side-left)"/>
+    <path d="M80 160 L95 157 L165 257 L150 270 Z" fill="url(#facet-side-left)"/>
+
+    <!-- 3D Main Front Facet -->
+    <path d="M135 25 L215 135 L165 150 L205 275 L95 165 L140 150 Z" fill="url(#facet-top)"/>
+
+    <!-- 3D Bottom/Right Extrusion Thickness -->
+    <path d="M215 135 L200 130 L150 145 L165 150 Z" fill="url(#facet-side-right)"/>
+    <path d="M205 275 L190 270 L150 270 L165 275 Z" fill="url(#facet-side-right)"/>
+
+    <!-- Inner Core Bright Neon Accent -->
+    <path d="M142 45 L198 132 L158 144 L190 250 L112 165 L146 152 Z" fill="#FFE082" opacity="0.35"/>
+
+    <!-- Specular Highlight Strip along the ridge -->
+    <path d="M135 25 L140 150 L95 165 L205 275" stroke="url(#specular-gloss)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M135 25 L215 135" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  </g>
+</svg>

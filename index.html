@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Suvam — Web Developer Portfolio. Building fast, captivating, and modern web applications with cutting-edge technologies.">
+  <meta name="keywords" content="Suvam, Web Developer, Frontend Engineer, React, Full Stack, UI/UX, Portfolio">
+  <meta name="author" content="Suvam">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Suvam — Web Developer">
+  <meta property="og:description" content="Hey, I am Suvam. Full-Stack Web Developer crafting modern digital experiences.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/suvam_character.png">
+
+  <title>Suvam's Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23FF5722'/><text x='50' y='65' font-size='48' font-weight='800' fill='white' text-anchor='middle'>N</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Subtle Film Grain Overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#home" class="brand-logo" aria-label="Suvam Home">
+        Suvam<span class="dot"> <br>Gyawali</span>
+      </a>
+
+      <nav class="nav-pill-group" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home🏠</a>
+        <a href="#skills" class="nav-link">Skills📚</a>
+        <a href="#experience" class="nav-link">Experience💼</a>
+        <a href="#connect" class="nav-link">Connect🤝</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <button id="btn-download-resume" class="btn-resume" aria-label="Download Suvam's Resume">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Download Resume</span>
+        </button>
+
+        <button class="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION (Matches Figma Frame 1440x1024) -->
+    <section id="home" class="hero-section">
+      <!-- 3D Crystal Lightning Shard (Bottom-Left Background) -->
+      <img src="assets/images/lightning_shard_bottom.svg" alt="" class="lightning-shard-bottom" aria-hidden="true">
+
+      <div class="container hero-layout">
+        <!-- Left Column: Typography & CTAs & Testimonial -->
+        <div class="hero-content">
+          <div class="hero-intro">
+            <span class="hero-intro-prefix">Hey, I am</span>
+            <span class="accent-name">Suvam</span>
+          </div>
+
+          <h1 class="hero-title" aria-label="Web Developer">
+            <span class="typewriter-text" data-text="Web Developer"></span>
+            <span class="type-cursor" aria-hidden="true"></span>
+          </h1>
+
+          <p class="hero-desc" aria-label="I’m a web developer who turns ideas into fast, interactive, and visually engaging digital experiences.">
+            <span class="desc-typewriter" data-text="I’m a web developer who turns ideas into fast🚀, interactive⚡, and visually engaging digital experiences💻. I love building clean, responsive websites that look great and work seamlessly across devices."></span>
+            <span class="desc-cursor" aria-hidden="true"></span>
+          </p>
+
+          <div class="hero-actions">
+            <button id="btn-hire-me" class="btn-hire">Hire me</button>
+            <button id="btn-contact-mail" class="btn-icon-mail" aria-label="Copy Email & Contact">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Glassmorphic Testimonial Card (Bottom Left) -->
+          <div class="testimonial-card-hero">
+            <div class="quote-icon" aria-hidden="true">&ldquo;&ldquo;</div>
+            <p class="testimonial-text">
+             Suvam did an amazing job bringing the idea to life. The website looks modern⭐, 
+             feels smooth🔥, and works beautifully across devices😍.
+            </p>
+            <div class="testimonial-author">
+              <img src="assets/images/carolina_avatar.jpg" alt="Carolina Abott" class="author-avatar">
+              <div class="author-info">
+                <span class="author-name">Carolina Abott</span>
+                <span class="author-role">Business Owner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: 3D Character Scene & Orbits -->
+        <div class="hero-visual-scene">
+          <!-- 3D Crystal Lightning Shard (Top-Right) -->
+          <img src="assets/images/lightning_shard_top.svg" alt="" class="lightning-shard-top" aria-hidden="true">
+
+          <!-- Amber Radial Glow -->
+          <div class="character-glow" aria-hidden="true"></div>
+
+          <!-- Concentric Orbital Radar Rings -->
+          <div class="orbit-system" aria-hidden="true">
+            <div class="orbit-ring ring-outer"></div>
+            <div class="orbit-ring ring-middle"></div>
+            <div class="orbit-ring ring-inner"></div>
+          </div>
+
+          <!-- 3D Character Illustration -->
+          <div class="character-container">
+            <img src="assets/images/suvam_character.png" alt="Suvam - 3D Character Web Developer" class="character-img">
+          </div>
+
+          <!-- Floating Orbital Badges (Figma Layout Positions) -->
+          <div class="floating-badge badge-html" title="HTML5">
+            <img src="assets/icons/html5.svg" alt="HTML5">
+          </div>
+
+          <div class="floating-badge badge-css" title="CSS3">
+            <img src="assets/icons/css3.svg" alt="CSS3">
+          </div>
+
+          <div class="floating-badge badge-node" title="Node.js">
+            <img src="assets/icons/nodejs.svg" alt="Node.js">
+          </div>
+
+          <div class="floating-badge badge-figma" title="Figma">
+            <img src="assets/icons/figma.svg" alt="Figma">
+          </div>
+
+          <div class="floating-badge badge-js" title="JavaScript">
+            <img src="assets/icons/javascript.svg" alt="JavaScript">
+          </div>
+
+          <div class="floating-badge badge-react" title="React">
+            <img src="assets/icons/react.svg" alt="React">
+          </div>
+
+          <div class="floating-badge badge-cpp" title="C++">
+            <img src="assets/icons/C%2B%2B%20SVG.svg" alt="C++">
+          </div>
+
+          <div class="floating-badge badge-python" title="Python">
+            <img src="assets/icons/python-svg.svg" alt="Python">
+          </div>
+
+          <div class="floating-badge badge-php" title="PHP">
+            <img src="assets/icons/php%20svg.svg" alt="PHP">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section-wrapper">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tech Stack & Mastery</span>
+          <h2 class="section-title">Engineered For Performance</h2>
+          <p class="section-subtitle">
+            From modern responsive user interfaces to resilient distributed backends, I build systems designed to scale smoothly and delight users.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">All Disciplines</button>
+          <button class="filter-btn" data-filter="frontend">Frontend Architecture</button>
+          <button class="filter-btn" data-filter="backend">Backend & APIs</button>
+          <button class="filter-btn" data-filter="design">UI/UX Systems</button>
+        </div>
+
+        <!-- Dynamic Skills Grid -->
+        <div id="skills-container" class="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & PROJECTS SECTION -->
+    <section id="experience" class="section-wrapper">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Selected Works</span>
+          <h2 class="section-title">Featured Web Projects</h2>
+          <p class="section-subtitle">
+            A showcase of production web applications built with rigorous attention to detail, motion design, and developer craftsmanship.
+          </p>
+        </div>
+
+        <div id="projects-container" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section-wrapper" style="padding-top: 40px;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Client Reviews</span>
+          <h2 class="section-title">Trusted By Visionary Leaders</h2>
+          <p class="section-subtitle">What founders, design directors, and product teams say about partnering with Suvam.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-box">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                &ldquo;Suvam transformed our vision into an unforgettable digital platform. Our conversion rates increased by 42% within two weeks of launch.&rdquo;
+              </p>
+            </div>
+            <div class="test-client">
+              <img src="assets/images/carolina_avatar.jpg" alt="Carolina Abott">
+              <div>
+                <div class="author-name">Carolina Abott</div>
+                <div class="author-role">Business Owner</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-box">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                &ldquo;Working with Suvam was effortlessly smooth. His aesthetic taste and engineering discipline are rare to find in one developer.&rdquo;
+              </p>
+            </div>
+            <div class="test-client">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&h=200&q=80" alt="Marcus Vance">
+              <div>
+                <div class="author-name">Marcus Vance</div>
+                <div class="author-role">VP of Product, ScaleLabs</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-box">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                &ldquo;The animations, micro-interactions, and speed Suvam delivered blew our board away. An exceptional engineer and designer.&rdquo;
+              </p>
+            </div>
+            <div class="test-client">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200&q=80" alt="Elena Rostova">
+              <div>
+                <div class="author-name">Elena Rostova</div>
+                <div class="author-role">Founder, Nexus Capital</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONNECT & CONTACT SECTION -->
+    <section id="connect" class="section-wrapper">
+      <div class="container">
+        <div class="contact-container-grid">
+          <!-- Info Column -->
+          <div class="contact-info-col">
+            <div>
+              <span class="section-tag">Get In Touch</span>
+              <h2 class="contact-headline">Let&rsquo;s Build Something Incredible Together.</h2>
+              <p class="contact-text">
+                Have a new web project in mind, need high-end frontend architecture, or want to discuss full-time opportunities? Drop me a line.
+              </p>
+
+              <div class="contact-cards-stack">
+                <div id="card-copy-email" class="contact-detail-card" title="Click to copy email">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-label">Direct Email</div>
+                    <div class="contact-value">suvamislearning@gmail.com</div>
+                  </div>
+                </div>
+
+                <div class="contact-detail-card">
+                  <div class="contact-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-label">Status</div>
+                    <div class="contact-value" style="color: #4CAF50; font-weight: 700;">● Available For Q3/Q4</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-row">
+              <a href="https://github.com/suvamislearning" target="_blank" rel="noreferrer" class="social-link-btn" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-link-btn" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/suvamislearning/" target="_blank" rel="noreferrer" class="social-link-btn" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+                </svg>
+              </a>
+              <a href="https://x.com/suvamislearning" target="_blank" rel="noreferrer" class="social-link-btn" aria-label="Twitter / X">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4l16 16"></path>
+                  <path d="M20 4L4 20"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Form -->
+          <form id="portfolio-contact-form" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Rivera" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="alex@company.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-service">What are you looking to build?</label>
+              <select id="contact-service" class="form-select">
+                <option value="webapp">Full-Stack Web Application</option>
+                <option value="landing">High-Converting Landing Page</option>
+                <option value="redesign">UI/UX Redesign & Optimization</option>
+                <option value="fulltime">Full-Time Engineering Role</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Project Details / Message</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Tell me about your goals, timeline, and budget..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-form">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a href="#home" class="brand-logo footer-brand" style="font-size: 20px;" aria-label="Suvam Gyawali home">
+        <span class="footer-name">
+          <span class="footer-letter">S</span><span class="footer-letter">u</span><span class="footer-letter">v</span><span class="footer-letter">a</span><span class="footer-letter">m</span>
+        </span>
+        <span class="footer-surname">
+          <span class="footer-letter">G</span><span class="footer-letter">y</span><span class="footer-letter">a</span><span class="footer-letter">w</span><span class="footer-letter">a</span><span class="footer-letter">l</span><span class="footer-letter">i</span>
+        </span>
+      </a>
+      <div class="footer-copyright">
+        &copy; Modified and Worked By Suvam. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS & DRAWERS
+       ========================================================================== -->
+
+  <!-- Hire Me Modal -->
+  <div id="modal-hire" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="hire-modal-title">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div style="margin-bottom: 24px;">
+        <span class="section-tag" style="margin-bottom: 8px;">Let's Collaborate</span>
+        <h3 id="hire-modal-title" style="font-size: 26px; font-weight: 800; color: #FFF;">Hire Suvam for Your Next Project</h3>
+        <p style="font-size: 14px; color: var(--text-secondary); margin-top: 6px;">
+          Fill out the quick form below and I will get back to you within 24 hours with project scope estimates.
+        </p>
+      </div>
+
+      <form id="form-hire-modal" class="contact-form">
+        <div class="form-group">
+          <label for="hire-name">Your Name / Organization</label>
+          <input type="text" id="hire-name" class="form-input" placeholder="e.g. Sarah Connor / Acme Corp" required>
+        </div>
+
+        <div class="form-group">
+          <label for="hire-email">Your Work Email</label>
+          <input type="email" id="hire-email" class="form-input" placeholder="sarah@acmecorp.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="hire-budget">Estimated Project Budget</label>
+          <select id="hire-budget" class="form-select">
+            <option value="5k-10k">$5,000 - $10,000</option>
+            <option value="10k-25k" selected>$10,000 - $25,000</option>
+            <option value="25k+">$25,000+</option>
+            <option value="fulltime">Full-time Contract / Salary</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="hire-notes">Project Summary & Timeline</label>
+          <textarea id="hire-notes" class="form-textarea" placeholder="Describe what you want to achieve..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit-form" style="width: 100%;">
+          <span>Submit Project Inquiry</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Resume Preview & Download Modal -->
+  <div id="modal-resume" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="modal-container resume-modal-container">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+        <div>
+          <span class="section-tag" style="margin-bottom: 6px;">Curriculum Vitae</span>
+          <h3 id="resume-modal-title" style="font-size: 24px; font-weight: 800; color: #FFF;">Suvam Gyawali — Resume & Credentials</h3>
+        </div>
+        <button id="btn-print-resume" class="btn-resume" style="background: var(--accent-orange); border: none; padding: 10px 24px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span>Print / Save as PDF</span>
+        </button>
+      </div>
+
+      <!-- Printable Resume Paper -->
+      <div class="resume-paper">
+        <div class="resume-header">
+          <div>
+            <div class="resume-candidate-name">Suvam Gyawali</div>
+            <div class="resume-candidate-role">Web Developer & AI Engineer</div>
+          </div>
+          <div style="text-align: right; font-size: 13px; color: var(--text-secondary);">
+            <div>suvamislearning@gmail.com</div>
+            <div>Lalitpur,Nepal&bull; Remote</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="resume-section-title">EXECUTIVE SUMMARY</div>
+          <p>
+            Accomplished Web Developer with 6+ years of specialized experience in high-performance frontend architecture, responsive web apps, dynamic motion design, and scalable API services. Proven track record leading UI systems that elevated conversion rates and user retention across SaaS, e-commerce, and cloud analytics platforms.
+          </p>
+
+          <div class="resume-section-title">CORE COMPETENCIES</div>
+          <p>
+            <strong>Frontend:</strong> React 19, Next.js, JavaScript (ESNext), TypeScript, HTML5, CSS3/SCSS, WebGL, GSAP, TailwindCSS<br>
+            <strong>Backend & Cloud:</strong> Node.js, Express, RESTful APIs, WebSockets, PostgreSQL, Redis, Docker, Vercel, AWS<br>
+            <strong>Design & Architecture:</strong> Figma, Design Systems, WCAG 2.1 AA Accessibility, Web Vitals Optimization
+          </p>
+
+          <div class="resume-section-title">PROFESSIONAL EXPERIENCE</div>
+          <div style="margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #FFF;">
+              <span>Lead Frontend Engineer &bull; ScaleFlow Digital</span>
+              <span>2023 &ndash; Present</span>
+            </div>
+            <ul style="margin-left: 20px; margin-top: 4px;">
+              <li>Architected enterprise web app serving 120,000+ daily active users, maintaining 99.98% uptime.</li>
+              <li>Reduced bundle size by 44% and improved Google Core Web Vitals score to 98/100 across mobile and desktop.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 12px;">
+            <div style="display: flex; justify-content: space-between; font-weight: 700; color: #FFF;">
+              <span>Senior Web Developer &bull; Studio HyperCraft</span>
+              <span>2021 &ndash; 2023</span>
+            </div>
+            <ul style="margin-left: 20px; margin-top: 4px;">
+              <li>Engineered bespoke interactive 3D e-commerce experiences and award-winning marketing platforms.</li>
+              <li>Authored comprehensive design token system bridging Figma components and React libraries.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Nepal Flag Icon -->
+  <div class="floating-flag-icon" role="img" aria-label="Nepal flag" title="Nepal">
+    <img class="nepal-flag-image" src="assets/icons/flag-for-flag-nepal-svgrepo-com.svg" alt="Nepal flag">
+  </div>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/hero-orbits.js"></script>
+  <script src="js/modals.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
