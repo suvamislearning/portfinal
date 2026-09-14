@@ -517,6 +517,57 @@
   </div>
 
   <!-- Floating Nepal Flag Icon -->
+  <aside class="chatbot-widget" aria-label="Portfolio chatbot">
+    <div id="chatbot-panel" class="chatbot-panel" hidden>
+      <div class="chatbot-header">
+        <div class="chatbot-heading">
+          <span class="chatbot-avatar" aria-hidden="true">
+            <img src="assets/icons/bot.png" alt="" class="chatbot-avatar-image">
+          </span>
+          <div>
+            <strong>Suvam&rsquo;s Assistant</strong>
+            <span>Ask me about the portfolio</span>
+          </div>
+        </div>
+        <button id="chatbot-close" class="chatbot-close" type="button" aria-label="Close chatbot">&times;</button>
+      </div>
+
+      <div id="chatbot-messages" class="chatbot-messages" aria-live="polite" aria-label="Chat messages">
+        <div class="chatbot-message chatbot-message-bot">
+          Hi! I&rsquo;m Suvam&rsquo;s portfolio assistant. Ask me about skills, projects, availability, or contact details.
+        </div>
+      </div>
+
+      <div class="chatbot-suggestions" aria-label="Suggested questions">
+        <button type="button" class="chatbot-suggestion" data-question="What skills does Suvam have?">Skills</button>
+        <button type="button" class="chatbot-suggestion" data-question="What projects has Suvam built?">Projects</button>
+        <button type="button" class="chatbot-suggestion" data-question="Is Suvam available for work?">Availability</button>
+      </div>
+
+      <form id="chatbot-form" class="chatbot-form">
+        <label class="sr-only" for="chatbot-input">Ask a question</label>
+        <input id="chatbot-input" class="chatbot-input" type="text" placeholder="Ask a question..." autocomplete="off" maxlength="240" required>
+        <button class="chatbot-send" type="submit" aria-label="Send question">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <button id="chatbot-toggle" class="chatbot-toggle" type="button" aria-expanded="false" aria-controls="chatbot-panel" aria-label="Open portfolio chatbot">
+      <span class="chatbot-toggle-icon" aria-hidden="true">
+        <img 
+        src="assets/icons/bot.png" 
+        alt="Chatbot"
+        style="width: 24px; height: 24px;"
+        >
+      </span>
+      <span class="chatbot-toggle-label">Chat</span>
+    </button>
+  </aside>
+
   <div class="floating-flag-icon" role="img" aria-label="Nepal flag" title="Nepal">
     <img class="nepal-flag-image" src="assets/icons/flag-for-flag-nepal-svgrepo-com.svg" alt="Nepal flag">
   </div>
@@ -526,6 +577,7 @@
   <script src="js/hero-orbits.js"></script>
   <script src="js/character-conversation.js"></script>
   <script src="js/modals.js"></script>
+  <script src="js/chatbot.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
