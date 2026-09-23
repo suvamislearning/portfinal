@@ -672,6 +672,14 @@
 
 /* Mobile Devices under 768px */
 @media (max-width: 768px) {
+  .site-header {
+    padding: 14px 0;
+  }
+
+  .nav-container {
+    min-height: 64px;
+  }
+
   .nav-pill-group {
     position: fixed;
     top: 80px;
@@ -698,7 +706,7 @@
     padding: 10px;
   }
   .hero-section {
-    padding: 100px 0 40px;
+    padding: 132px 0 40px;
   }
   .hero-title {
     font-size: 46px;
@@ -759,7 +767,7 @@
   .container { padding: 0 16px; }
   .nav-container { padding: 0 16px; }
   .nav-pill-group { top: 72px; left: 12px; right: 12px; padding: 16px; border-radius: 14px; }
-  .hero-section { padding: 84px 0 32px; }
+  .hero-section { padding: 132px 0 32px; }
   .hero-layout { gap: 24px; min-height: auto; grid-template-columns: 1fr; }
   .hero-intro { font-size: 18px; }
   .hero-title { font-size: 34px; }
