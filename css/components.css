@@ -702,6 +702,16 @@
   }
   .hero-title {
     font-size: 46px;
+    display: block;
+    line-height: 1.06;
+  }
+  .typewriter-text {
+    display: inline;
+    white-space: normal;
+  }
+  .type-cursor {
+    display: inline-block;
+    transform: translateY(-2px);
   }
   .character-img {
     max-width: 320px;
@@ -716,6 +726,23 @@
   .chatbot-toggle {
     min-height: 48px;
     padding: 0 15px;
+  }
+  .testimonial-card-face {
+    min-height: auto;
+    padding: 22px 18px;
+  }
+  .testimonial-text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .testimonial-author {
+    gap: 10px;
+  }
+  .author-name {
+    font-size: 14px;
+  }
+  .author-role {
+    font-size: 12px;
   }
 }
 
@@ -734,6 +761,7 @@
   .nav-pill-group { top: 72px; left: 12px; right: 12px; padding: 16px; border-radius: 14px; }
   .hero-section { padding: 84px 0 32px; }
   .hero-layout { gap: 24px; min-height: auto; grid-template-columns: 1fr; }
+  .hero-intro { font-size: 18px; }
   .hero-title { font-size: 34px; }
   .hero-desc { max-width: 100%; font-size: 15px; margin-bottom: 20px; }
   .hero-actions { flex-direction: column; gap: 12px; align-items: stretch; }
@@ -745,5 +773,10 @@
   .tech-marquee { width: calc(100% - 24px); margin-top: 20px; padding: 8px 0; }
   .tech-item { width: 44px; height: 44px; border-radius: 12px; padding: 8px; }
   .testimonial-card-hero { max-width: 100%; position: relative; left: 0; transform: none; margin-top: 18px; }
+  .testimonial-card-face { padding: 18px 16px; border-radius: 22px; }
+  .testimonial-text { font-size: 12.5px; }
+  .testimonial-back-text { font-size: 14px; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonial-box { padding: 20px; }
   .chatbot-widget { right: 12px; bottom: 72px; }
 }
