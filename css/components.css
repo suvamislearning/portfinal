@@ -726,3 +726,24 @@
     box-shadow: 0 20px 50px rgba(76, 52, 38, 0.16);
   }
 }
+
+/* Small phones and narrow viewports */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .nav-container { padding: 0 16px; }
+  .nav-pill-group { top: 72px; left: 12px; right: 12px; padding: 16px; border-radius: 14px; }
+  .hero-section { padding: 84px 0 32px; }
+  .hero-layout { gap: 24px; min-height: auto; grid-template-columns: 1fr; }
+  .hero-title { font-size: 34px; }
+  .hero-desc { max-width: 100%; font-size: 15px; margin-bottom: 20px; }
+  .hero-actions { flex-direction: column; gap: 12px; align-items: stretch; }
+  .btn-hire { width: 100%; padding: 12px 18px; }
+  .btn-icon-mail { width: 48px; height: 48px; align-self: center; }
+  .character-container { width: min(100%, 280px); min-height: 220px; }
+  .character-img { max-width: 260px; }
+  .hero-visual-scene { min-height: 360px; }
+  .tech-marquee { width: calc(100% - 24px); margin-top: 20px; padding: 8px 0; }
+  .tech-item { width: 44px; height: 44px; border-radius: 12px; padding: 8px; }
+  .testimonial-card-hero { max-width: 100%; position: relative; left: 0; transform: none; margin-top: 18px; }
+  .chatbot-widget { right: 12px; bottom: 72px; }
+}
