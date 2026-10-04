@@ -119,6 +119,31 @@
   margin: 20px 0 12px;
 }
 
+.resume-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.resume-modal-header .section-tag {
+  margin-bottom: 6px;
+}
+
+.resume-modal-header h3 {
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.resume-modal-header .btn-resume {
+  flex-shrink: 0;
+  background: var(--accent-orange);
+  border: 0;
+  padding: 10px 24px;
+}
+
 /* Floating Flag Icon */
 .floating-flag-icon {
   position: fixed;
@@ -672,6 +697,16 @@
 
 /* Mobile Devices under 768px */
 @media (max-width: 768px) {
+  .modal-backdrop {
+    padding: 16px;
+  }
+
+  .modal-container {
+    max-height: calc(100dvh - 32px);
+    padding: 28px 22px;
+    border-radius: 22px;
+  }
+
   .site-header {
     padding: 14px 0;
   }
@@ -680,9 +715,13 @@
     min-height: 64px;
   }
 
+  .nav-actions > .btn-resume {
+    display: none;
+  }
+
   .nav-pill-group {
     position: fixed;
-    top: 80px;
+    top: 100px;
     left: 20px;
     right: 20px;
     flex-direction: column;
@@ -696,14 +735,24 @@
   .nav-pill-group.mobile-open {
     display: flex;
   }
+  .nav-link {
+    width: 100%;
+  }
+  .mobile-resume-action {
+    display: block;
+    text-align: left;
+    color: var(--accent-orange);
+    font-weight: 700;
+  }
+  .mobile-resume-action:hover {
+    background: var(--accent-orange-soft);
+  }
   .hamburger-btn {
     display: flex;
-  }
-  .btn-resume span {
-    display: none;
-  }
-  .btn-resume {
-    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
   }
   .hero-section {
     padding: 132px 0 40px;
@@ -764,9 +813,62 @@
 
 /* Small phones and narrow viewports */
 @media (max-width: 480px) {
+  .nav-container {
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  .nav-container > .brand-logo {
+    font-size: 21px;
+  }
+
+  .nav-actions {
+    flex-shrink: 0;
+    gap: 8px;
+  }
+
+  .theme-switcher {
+    padding: 2px;
+  }
+
+  .theme-option {
+    padding: 6px 7px;
+    font-size: 11px;
+  }
+
+  .modal-backdrop {
+    padding: 12px;
+  }
+
+  .modal-container {
+    max-height: calc(100dvh - 24px);
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  .resume-modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding-right: 28px;
+  }
+
+  .resume-modal-header h3 {
+    font-size: 21px;
+  }
+
+  .resume-modal-header .btn-resume {
+    padding: 10px 16px;
+  }
+
+  .resume-paper {
+    padding: 20px;
+    font-size: 13px;
+  }
+
   .container { padding: 0 16px; }
   .nav-container { padding: 0 16px; }
-  .nav-pill-group { top: 72px; left: 12px; right: 12px; padding: 16px; border-radius: 14px; }
+  .nav-pill-group {   top: 100px; left: 12px; right: 12px; padding: 16px; border-radius: 14px; }
   .hero-section { padding: 132px 0 32px; }
   .hero-layout { gap: 24px; min-height: auto; grid-template-columns: 1fr; }
   .hero-intro { font-size: 18px; }
@@ -787,4 +889,80 @@
   .testimonials-grid { grid-template-columns: 1fr; }
   .testimonial-box { padding: 20px; }
   .chatbot-widget { right: 12px; bottom: 72px; }
+}
+
+@media print {
+  @page {
+    margin: 16mm;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  #modal-resume,
+  #modal-resume * {
+    visibility: visible !important;
+  }
+
+  #modal-resume {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #fff !important;
+    opacity: 1 !important;
+    backdrop-filter: none !important;
+  }
+
+  #modal-resume .resume-modal-container {
+    position: static !important;
+    width: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  #modal-resume .resume-modal-header,
+  #modal-resume .modal-close-btn {
+    display: none !important;
+  }
+
+  #modal-resume .resume-paper {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: #fff;
+    color: #111;
+    font-size: 10pt;
+    line-height: 1.45;
+  }
+
+  #modal-resume .resume-paper * {
+    color: #111 !important;
+  }
+
+  #modal-resume .resume-candidate-role {
+    color: #a33b14 !important;
+  }
+
+  #modal-resume .resume-section-title {
+    border-color: #a33b14;
+    break-after: avoid;
+  }
+
+  #modal-resume .resume-paper p,
+  #modal-resume .resume-paper li {
+    break-inside: avoid;
+  }
 }

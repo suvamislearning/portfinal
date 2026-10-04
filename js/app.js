@@ -234,12 +234,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const navPills = document.querySelector('.nav-pill-group');
   if (hamburger && navPills) {
     hamburger.addEventListener('click', () => {
-      navPills.classList.toggle('mobile-open');
+      const isOpen = navPills.classList.toggle('mobile-open');
+      hamburger.setAttribute('aria-expanded', String(isOpen));
     });
 
     document.querySelectorAll('.nav-link').forEach((l) => {
       l.addEventListener('click', () => {
         navPills.classList.remove('mobile-open');
+        hamburger.setAttribute('aria-expanded', 'false');
       });
     });
   }

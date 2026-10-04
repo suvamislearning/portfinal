@@ -41,28 +41,29 @@
         Suvam<span class="dot"> <br>Gyawali</span>
       </a>
 
-      <nav class="nav-pill-group" aria-label="Main Navigation">
+      <nav id="primary-navigation" class="nav-pill-group" aria-label="Main Navigation">
         <a href="#home" class="nav-link active">Home🏠</a>
         <a href="#skills" class="nav-link">Skills📚</a>
         <a href="#experience" class="nav-link">Experience💼</a>
         <a href="#connect" class="nav-link">Connect🤝</a>
+        <button class="nav-link mobile-resume-action btn-open-resume" type="button" aria-label="View Suvam's resume">View Resume</button>
       </nav>
 
-      <div style="display: flex; align-items: center; gap: 14px;">
-        <button id="btn-download-resume" class="btn-resume" aria-label="Download Suvam's Resume">
+      <div class="nav-actions">
+        <button id="btn-download-resume" class="btn-resume btn-open-resume" type="button" aria-label="View Suvam's resume">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          <span>Download Resume</span>
+          <span>View Resume</span>
         </button>
         <div class="theme-switcher" role="group" aria-label="Choose color theme">
           <button id="btn-theme-dark" class="theme-option" type="button" data-theme-choice="dark" aria-pressed="true">Dark</button>
           <button id="btn-theme-light" class="theme-option" type="button" data-theme-choice="light" aria-pressed="false">Light</button>
         </div>
 
-        <button class="hamburger-btn" aria-label="Toggle navigation menu">
+        <button class="hamburger-btn" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation menu">
           <span></span>
           <span></span>
           <span></span>
@@ -306,34 +307,6 @@
               </div>
             </div>
 
-            <!-- Social Links -->
-            <div class="social-links-row">
-              <a href="https://github.com/suvamislearning" target="_blank" rel="noreferrer" class="social-link-btn" aria-label="GitHub">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-link-btn" aria-label="LinkedIn">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-              </a>
-              <a href="https://www.instagram.com/suvamislearning/" target="_blank" rel="noreferrer" class="social-link-btn" aria-label="Instagram">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="2" width="20" height="20" rx="5"></rect>
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
-                </svg>
-              </a>
-              <a href="https://x.com/suvamislearning" target="_blank" rel="noreferrer" class="social-link-btn" aria-label="Twitter / X">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4l16 16"></path>
-                  <path d="M20 4L4 20"></path>
-                </svg>
-              </a>
-            </div>
           </div>
 
           <!-- Interactive Form -->
@@ -388,8 +361,43 @@
           <span class="footer-letter">G</span><span class="footer-letter">y</span><span class="footer-letter">a</span><span class="footer-letter">w</span><span class="footer-letter">a</span><span class="footer-letter">l</span><span class="footer-letter">i</span>
         </span>
       </a>
-      <div class="footer-copyright">
-        &copy; Modified and Worked By Suvam. All rights reserved.
+      <nav class="social-links-row footer-social-links" aria-label="Social media">
+        <a href="https://github.com/suvamislearning" target="_blank" rel="noreferrer" class="social-link-btn" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noreferrer" class="social-link-btn" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/suvamislearning/" target="_blank" rel="noreferrer" class="social-link-btn" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </a>
+        <a href="https://x.com/suvamislearning" target="_blank" rel="noreferrer" class="social-link-btn" aria-label="Twitter / X">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4l16 16"></path>
+            <path d="M20 4L4 20"></path>
+          </svg>
+        </a>
+      </nav>
+      <div class="footer-meta">
+        <div class="footer-copyright">
+          &copy; Modified and Worked By Suvam. All rights reserved.
+        </div>
+        <a class="footer-back-to-top" href="#home">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m18 15-6-6-6 6"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
       </div>
     </div>
   </footer>
@@ -446,20 +454,20 @@
   <!-- Resume Preview & Download Modal -->
   <div id="modal-resume" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
     <div class="modal-container resume-modal-container">
-      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-      
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+      <button class="modal-close-btn" type="button" aria-label="Close modal">&times;</button>
+
+      <div class="resume-modal-header">
         <div>
-          <span class="section-tag" style="margin-bottom: 6px;">Curriculum Vitae</span>
-          <h3 id="resume-modal-title" style="font-size: 24px; font-weight: 800; color: #FFF;">Suvam Gyawali — Resume & Credentials</h3>
+          <span class="section-tag">Resume</span>
+          <h3 id="resume-modal-title">Suvam Gyawali</h3>
         </div>
-        <button id="btn-print-resume" class="btn-resume" style="background: var(--accent-orange); border: none; padding: 10px 24px;">
+        <button id="btn-print-resume" class="btn-resume" type="button">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2">
             <polyline points="6 9 6 2 18 2 18 9"></polyline>
             <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
             <rect x="6" y="14" width="12" height="8"></rect>
           </svg>
-          <span>Print / Save as PDF</span>
+          <span>Save as PDF</span>
         </button>
       </div>
 

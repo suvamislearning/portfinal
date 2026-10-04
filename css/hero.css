@@ -37,6 +37,16 @@
   padding: 0 48px;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.mobile-resume-action {
+  display: none;
+}
+
 /* Brand Logo */
 .brand-logo {
   font-size: 28px;

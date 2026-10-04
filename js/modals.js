@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hireModal = document.getElementById('modal-hire');
   const resumeModal = document.getElementById('modal-resume');
   const btnHire = document.getElementById('btn-hire-me');
-  const btnResume = document.getElementById('btn-download-resume');
+  const resumeButtons = document.querySelectorAll('.btn-open-resume');
   const btnContactMail = document.getElementById('btn-contact-mail');
   const closeButtons = document.querySelectorAll('.modal-close-btn, .modal-backdrop');
 
@@ -45,12 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Open Resume Modal
-  if (btnResume && resumeModal) {
-    btnResume.addEventListener('click', (e) => {
-      e.preventDefault();
-      resumeModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-      if (window.soundFx) window.soundFx.playClick();
+  if (resumeButtons.length && resumeModal) {
+    resumeButtons.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        resumeModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (window.soundFx) window.soundFx.playClick();
+      });
     });
   }
 
@@ -115,14 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Handle Resume Print/Download Trigger
+  // Print the resume; the print stylesheet limits output to the resume itself.
   const btnPrintResume = document.getElementById('btn-print-resume');
   if (btnPrintResume) {
     btnPrintResume.addEventListener('click', () => {
-      showToast('Preparing Noah\'s Resume for printing / PDF download...', '📄');
-      setTimeout(() => {
-        window.print();
-      }, 600);
+      window.print();
     });
   }
 });

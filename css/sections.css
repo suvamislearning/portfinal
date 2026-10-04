@@ -236,7 +236,7 @@
    ========================================================================== */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
   gap: 32px;
 }
 
@@ -386,7 +386,7 @@
    ========================================================================== */
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 28px;
 }
 
@@ -440,7 +440,7 @@
    ========================================================================== */
 .contact-container-grid {
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
   gap: 48px;
   background: rgba(26, 15, 10, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -451,6 +451,7 @@
 }
 
 .contact-info-col {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -490,6 +491,10 @@
   transition: var(--transition-fast);
 }
 
+.contact-detail-card > div:last-child {
+  min-width: 0;
+}
+
 .contact-detail-card:hover {
   background: rgba(255, 87, 34, 0.08);
   border-color: rgba(255, 87, 34, 0.35);
@@ -518,6 +523,7 @@
   font-size: 15px;
   font-weight: 600;
   color: var(--text-white);
+  overflow-wrap: anywhere;
 }
 
 .social-links-row {
@@ -549,6 +555,7 @@
 
 /* Contact Form */
 .contact-form {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -556,11 +563,12 @@
 
 .form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 20px;
 }
 
 .form-group {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -634,6 +642,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
 }
 
 .footer-brand {
@@ -672,4 +681,127 @@
 .footer-copyright {
   font-size: 14px;
   color: var(--text-muted);
+}
+
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.footer-back-to-top:hover {
+  color: var(--accent-orange);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .footer-content,
+  .footer-meta {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-meta {
+    gap: 12px;
+  }
+
+  .contact-container-grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 28px;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-wrapper {
+    padding: 76px 0;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+  }
+
+  .section-title {
+    font-size: clamp(30px, 8vw, 36px);
+  }
+
+  .skills-grid,
+  .projects-grid,
+  .testimonials-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .skill-card,
+  .project-body {
+    padding: 20px;
+  }
+
+  .project-preview {
+    height: 190px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .project-actions {
+    gap: 10px;
+  }
+
+  .btn-project-primary {
+    padding: 11px 14px;
+  }
+
+  .contact-container-grid {
+    padding: 20px 16px;
+    gap: 24px;
+    border-radius: 22px;
+  }
+
+  .contact-headline {
+    font-size: clamp(28px, 8vw, 34px);
+  }
+
+  .contact-text,
+  .contact-cards-stack {
+    margin-bottom: 24px;
+  }
+
+  .contact-detail-card {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .contact-value {
+    font-size: 14px;
+  }
+
+  .contact-form {
+    gap: 16px;
+  }
+
+  .form-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .btn-submit-form {
+    width: 100%;
+    padding: 14px 20px;
+  }
 }
